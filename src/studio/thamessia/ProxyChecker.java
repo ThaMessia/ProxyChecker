@@ -18,7 +18,7 @@ public class ProxyChecker {
             stringBuilder.append(fileStringManager);
             InetAddress address = InetAddress.getByName(fileStringManager);
 
-            if (!address.isReachable(5000)) System.out.println("PROXY: " + fileStringManager + " is working.");
+            if (address.isReachable(5000)) System.out.println("PROXY: " + fileStringManager + " is working.");
             else System.err.println("PROXY: " + fileStringManager + " is not working.");
         }
 
